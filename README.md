@@ -1,4 +1,4 @@
-# PrM_analysis
+#PrM_analysis
 Analysis code for Purity Monitor (PrM) waveforms in liquid argon - waveform fitting, electron lifetime extraction, and E2 field scan analysis.
 ---
 
@@ -32,7 +32,7 @@ Each plot script also writes a .list file alongside every plot.
 
 3. What to change between runs
 
-### For a new standard lifetime run
+#For a new standard lifetime run
 
 In config.py, update the expected voltage settings to match the run:
 
@@ -44,7 +44,7 @@ These are used by `run_lifetime.py` to select only waveforms matching those volt
 
 
 
-### For a new E2 scan
+#For a new E2 scan
 
 In config.py, update the run prefix to match the date of your new scan:
 
@@ -55,20 +55,20 @@ Files are selected for the E2 scan by looking for rows where the Comments column
 
 
 
-### Check the detector geometry
+#Check the detector geometry
 
 In config.py, update the relevant sections:
 
-# Preamplifier
+#Preamplifier
 Cf_a = 1.4        # anode feedback capacitance [pF]
 Cf_c = 1.4        # cathode feedback capacitance [pF]
 VOUT_GAIN = 2.0   # CSP output gain
 
-# Time constants
+#Time constants
 TAU_CATHODE_US = 133.8
 TAU_ANODE_US    = 134.5
 
-# Detector distances
+#Detector distances
 D1_CM  = 1.9   # cathode → cathode grid [cm]
 D2_CM  = 5.8   # cathode grid → anode grid [cm]
 D3_CM  = 1.2   # anode grid → anode [cm]
